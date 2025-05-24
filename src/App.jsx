@@ -1,5 +1,11 @@
+import Hero from "./sections/Hero";
+
 function App() {
-  return <>app.jsx</>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
 
 export default App;
