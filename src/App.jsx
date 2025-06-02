@@ -5,6 +5,7 @@ import LogoSection from "./sections/LogoSection";
 import FeatureCards from "./sections/FeatureCards";
 
 function App() {
+  console.log("Create with ❤️ by Nikhil Jayant");
   return (
     <>
       <Navbar />
