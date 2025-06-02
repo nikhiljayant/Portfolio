@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
-import LogoSection from "./components/LogoSection";
+import LogoSection from "./sections/LogoSection";
+import FeatureCards from "./sections/FeatureCards";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <ShowcaseSection />
       <LogoSection />
+      <FeatureCards />
     </>
   );
 }
