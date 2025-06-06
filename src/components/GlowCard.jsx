@@ -1,9 +1,5 @@
-import React from 'react'
+const GlowCard = ({ card, children }) => {
+  return <div>GlowCard</div>;
+};
 
-const GlowCard = () => {
-  return (
-    <div>GlowCard</div>
-  )
-}
-
-export default GlowCard
+export default GlowCard;
