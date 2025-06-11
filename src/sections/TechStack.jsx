@@ -11,9 +11,8 @@ const TechStack = () => {
           title={"My Preferred Tech Stack"}
           sub={"🤝 The Skills I Bring to the Table"}
         />
-      </div>
 
-      <div className="tech-grid">
+        <div className="tech-grid">
         {techStackIcons.map((icon) => (
           <div
             key={icon.name}
@@ -31,6 +30,7 @@ const TechStack = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
