@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import TitleHeader from "../components/TitleHeader";
+import ContactExperience from "../components/models/contact/ContactExperience";
 
 const Contact = () => {
   const [formData, setFormData] = useState({});
@@ -70,13 +71,22 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full py-4 bg-white text-black font-semibold rounded-md flex justify-center items-center"
-                >
-                  Send Message
+                <button type="submit">
+                  <div className="cta-button group">
+                    <div className="bg-circle" />
+                    <p className="text">Send Message</p>
+                    <div className="arrow-wrapper">
+                      <img src="/images/arrow-down.svg" alt="arrow" />
+                    </div>
+                  </div>
                 </button>
               </form>
+            </div>
+          </div>
+
+          <div className="xl:col-span-7 min-h-96">
+            <div className="w-full h-full bg-[#cd7c26] hover:cursor-grab rounded-3xl overflow-hidden">
+              <ContactExperience />
             </div>
           </div>
         </div>
