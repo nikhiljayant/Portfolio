@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/models/contact/ContactExperience";
 
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const formRef = useRef(null);
+
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({});
+  const [emailjsResponse, setEmailjsResponse] = useState({
+    type: null,
+    msg: "",
+  });
 
   const handleChange = (e) => {
     setFormData({
@@ -13,8 +22,38 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setLoading(true);
+    await emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then((res) => {
+        if (res?.text && res?.text?.toLowerCase() === "ok") {
+          setEmailjsResponse({
+            type: "success",
+            msg: "Your message has been sent successfully!",
+          });
+          formRef.current.reset();
+          setFormData({});
+        }
+      })
+      .catch((err) => {
+        if (err) {
+          setEmailjsResponse({
+            type: "error",
+            msg: "There was an error sending your message. Please try again later.",
+          });
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -32,6 +71,7 @@ const Contact = () => {
               <form
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col gap-7"
+                ref={formRef}
               >
                 <div>
                   <label htmlFor="name">Name</label>
@@ -71,10 +111,25 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button type="submit">
+                {emailjsResponse.type &&
+                  (emailjsResponse.type === "success" ? (
+                    <p className="text-green-500 text-center">
+                      ✅ {emailjsResponse.msg}
+                    </p>
+                  ) : (
+                    emailjsResponse.type === "error" && (
+                      <p className="text-red-500 text-center">
+                        ❗{emailjsResponse.msg}
+                      </p>
+                    )
+                  ))}
+
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
-                    <p className="text">Send Message</p>
+                    <p className="text">
+                      {loading ? "Sending..." : "Send Message"}
+                    </p>
                     <div className="arrow-wrapper">
                       <img src="/images/arrow-down.svg" alt="arrow" />
                     </div>
