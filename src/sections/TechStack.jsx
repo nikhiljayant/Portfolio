@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TechIcon from "../components/models/techLogos/TechIcon";
 import TitleHeader from "../components/TitleHeader";
 
-import { techStackIcons } from "../constants";
+import { techStackIcons, techStackImgs } from "../constants";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,7 +40,7 @@ const TechStack = () => {
         />
 
         <div className="tech-grid">
-          {techStackIcons.map((icon) => (
+          {techStackImgs.map((icon) => (
             <div
               key={icon.name}
               className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
@@ -48,7 +48,8 @@ const TechStack = () => {
               <div className="tech-card-animated-bg" />
               <div className="tech-card-content">
                 <div className="tech-icon-wrapper">
-                  <TechIcon model={icon} />
+                  {/* <TechIcon model={icon} /> */}
+                  <img src={icon.imgPath} />
                 </div>
 
                 <div className="padding-x w-full">

@@ -91,24 +91,36 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "React Developer",
+    name: "ReactJS",
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "Redux",
+    imgPath: "/images/logos/redux.png",
   },
   {
-    name: "Backend Developer",
+    name: "JavaScript",
     imgPath: "/images/logos/node.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "API Integration",
+    imgPath: "/images/logos/api.jpg",
   },
   {
-    name: "Project Manager",
+    name: "Tailwind CSS",
+    imgPath: "/images/logos/tailwindcss.png",
+  },
+  {
+    name: "Git & GitHub",
     imgPath: "/images/logos/git.svg",
+  },
+  {
+    name: "Firebase",
+    imgPath: "/images/logos/firebase.png",
+  },
+  {
+    name: "Cashfree Payments",
+    imgPath: "/images/logos/cashfree.webp",
   },
 ];
 
@@ -148,41 +160,38 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+      "Nikhil brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
     imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
+    // logoPath: "/images/logo1.png",
     title: "Frontend Developer",
-    date: "January 2023 - Present",
+    date: "December 2023 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
+      "Developed and maintained user-facing features for the Client Products.",
       "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
       "Optimized web applications for maximum speed and scalability.",
+      "Integrated and consumed backend APIs to enable dynamic data rendering and ensure seamless communication between frontend and server-side services.",
     ],
   },
   {
     review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+      "Nikhil’s contributions to our team have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    // logoPath: "/images/logo2.png",
+    title: "eGovernance & Information Technology Intern",
+    date: "April 2023 - October 2023",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Acted as a vital link between the Indian Council for Cultural Relations and the National Informatics Centre, ensuring the smooth execution of the eOffice portal project.",
     ],
   },
   {
     review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+      "Nikhil's work brought a high level of quality and efficiency. He delivered solutions that enhanced our user's experience & meet our product goals.",
     imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    // logoPath: "/images/logo3.png",
+    title: "Software Engineer Intern",
+    date: "Februrary 2023 - April 2023",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Built a React.js-based software solution that enables users to report and flag sensitive content with precise timestamp tracking, improving moderation workflows.",
     ],
   },
 ];
