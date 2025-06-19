@@ -47,28 +47,59 @@ const ShowcaseSection = () => {
           {/* LEFT */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Project 1" />
+              <img
+                src="/images/project/project1.png"
+                alt="Project 1"
+                className="object-top"
+              />
             </div>
             <div className="text-content">
-              <h2>Project 1</h2>
-              <p className="text-white-50 md:text-xl">Project 1 Description</p>
+              <h2
+                className="cursor-pointer underline"
+                onClick={() => window.open("https://investmentexperts.in/")}
+              >
+                Investment Experts
+              </h2>
+              <p className="text-white-50 md:text-xl">
+                Comprehensive Real Estate Website Solution featuring an
+                integrated Admin Panel for efficient content management,
+                property listings, and updates.
+              </p>
             </div>
           </div>
 
           {/* RIGHT */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
-              <div className="image-wrapper bg-[#ffefdb]">
-                <img src="/images/project2.png" alt="Project 2" />
+              <div className="xl:h-[37vh] md:h-52 lg:h-72 h-64 rounded-xl">
+                <img
+                  src="/images/project/project2.png"
+                  alt="Project 2"
+                  className="w-full h-full object-top"
+                />
               </div>
-              <h2>Project 2</h2>
+              <h2
+                className="cursor-pointer underline"
+                onClick={() => window.open("https://hirrd-gamma.vercel.app/")}
+              >
+                Hirrd
+              </h2>
             </div>
 
             <div className="project" ref={project3Ref}>
-              <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/project3.png" alt="Project 3" />
+              <div className="xl:h-[37vh] md:h-52 lg:h-72 h-64 rounded-xl">
+                <img
+                  src="/images/project/project3.png"
+                  alt="Project 3"
+                  className="w-full h-full object-top"
+                />
               </div>
-              <h2>Project 3</h2>
+              <h2
+                className="cursor-pointer underline"
+                onClick={() => window.open("https://kreobeta.iqsetters.com/")}
+              >
+                KREO World
+              </h2>
             </div>
           </div>
         </div>
